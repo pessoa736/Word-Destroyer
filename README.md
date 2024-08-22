@@ -18,5 +18,5 @@ CONTRIBUIÇÃO
 
 - Musica de Fundo:  Music by <a href="https://pixabay.com/pt/users/geoffreyburch-5739114/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=22045">Geoffrey Burch</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=22045">Pixabay</a>
 
--Musica de Fim de Jogo:
+- Musica de Fim de Jogo:
 Alien Phone Sex (Last 15s Loop) 2008 Copyright Tobias "Sum-1" Peterson License: Creative Commons Attribution 3.0 Unported
