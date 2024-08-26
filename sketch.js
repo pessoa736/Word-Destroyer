@@ -3,9 +3,10 @@
 http://www.colabeduc.org/descricao/show/1589
 
 - Projeto no ColabEduc: 
-
+http://www.colabeduc.org/projeto/show/1947
 
 - video explicativo projeto 3:
+https://youtu.be/iMRBBvT9XHE
 
 */
 // variaveis para posições, dinamica do menu
