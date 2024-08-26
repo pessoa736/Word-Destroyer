@@ -70,7 +70,7 @@ function preload() {
   imgCidade = loadImage("img/City.png");
 
   for(var i = 0; i<=29; i++){
-    imgExplosao[i] = loadImage("/img/Explosao/expl_"+i+".png", loading_files);
+    imgExplosao[i] = loadImage("/img/Explosao/expl_"+i+".png");
   }
 
   // variaveis de nivel, pontuação e vida
