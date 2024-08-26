@@ -73,7 +73,7 @@ function preload() {
   imgCidade = loadImage("img/City.png");
 
   for(var i = 0; i<=29; i++){
-    imgExplosao[i] = loadImage("/img/Explosao/expl_"+i+".png");
+    imgExplosao[i] = loadImage("https://raw.githubusercontent.com/Emanuel0505/Word-Destroyer/main/img/Explosao/expl_"+i+".png");
   }
 
   // variaveis de nivel, pontuação e vida
