@@ -13,9 +13,10 @@ https://youtu.be/iMRBBvT9XHE
 var tela = "menu";
 var menu;
 
-var bloco1_1, bloco1_2, bloco1_3, bloco1_4, blocoMenu, blocoDinamico;
-var bloco2, bloco3_1, bloco3_2, bloco4_1, bloco4_2, bloco5, bloco6, bloco7_1, bloco7_2;
-var bloco8, bloco9;
+var blocos = []
+//var bloco1_1, bloco1_2, bloco1_3, bloco1_4, blocoMenu, blocoDinamico;
+//var bloco2, bloco3_1, bloco3_2, bloco4_1, bloco4_2, bloco5, bloco6, bloco7_1, bloco7_2;
+//var bloco8, bloco9;
 
 var Ydinamica;
 
@@ -97,29 +98,34 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   var font;
   //blocos objeto
-  bloco1_1 = new bloco(0.3, 0.11, 0.5, 0.39, 121, 174, 146);
-  bloco1_2 = new bloco(0.3, 0.11, 0.5, 0.506, 121, 174, 146);
-  bloco1_3 = new bloco(0.3, 0.11, 0.5, 0.622, 121, 174, 146);
-  bloco1_4 = new bloco(0.3, 0.11, 0.5, 0.738, 121, 174, 146);
+  let block_color1 = color(121, 174, 146)
+  let block_size1 = vec2(0.3, 0.11)
 
-  blocoMenu = new bloco(0.05, 0.08, 0.972, 0.05, 121, 174, 146);
+  let block_color2 = color(28, 85, 96)
+  
+  blocos[1.1] = new bloco(block_size1, vec2(0.5, 0.39),  block_color1);
+  blocos[1.2] = new bloco(block_size1, vec2(0.5, 0.506), block_color1);
+  blocos[1.3] = new bloco(block_size1, vec2(0.5, 0.622), block_color1);
+  blocos[1.4] = new bloco(block_size1, vec2(0.5, 0.738), block_color1);
 
-  bloco2 = new bloco(0.9, 0.7, 0.5, 0.6, 121, 174, 146);
+  blocos["Menu"] = new bloco(block_size1, vec2(0.972, 0.05), block_color1);
 
-  bloco3_1 = new bloco(0.9, 0.1, 0.5, 0.31, 121, 174, 146);
-  bloco3_2 = new bloco(0.9, 0.1, 0.5, 0.42, 121, 174, 146);
+  blocos[2] = new bloco(0.9, 0.7,  vec2(0.5, 0.6), block_color1);
 
-  bloco4_1 = new bloco(0.28, 0.32, 0.2, 0.43, 28, 85, 96);
-  bloco4_2 = new bloco(0.28, 0.32, 0.2, 0.77, 28, 85, 96);
+  bloco3_1 = new bloco(0.9, 0.1,  vec2(0.5, 0.31), block_color1);
+  bloco3_2 = new bloco(0.9, 0.1,  vec2(0.5, 0.42), block_color1);
+  
+  bloco4_1 = new bloco(0.28, 0.32,  vec2(0.2, 0.43), block_color2);
+  bloco4_2 = new bloco(0.28, 0.32,  vec2(0.2, 0.77), block_color2);
 
-  bloco6 = new bloco(0.15, 0.25, 0.5, 0.5, 121, 174, 146);
+  bloco6 = new bloco(0.15, 0.25,  vec2(0.5, 0.5), block_color1);
 
-  bloco7_1 = new bloco(0.125, 0.07, 0.5, 0.48, 28, 85, 96);
-  bloco7_2 = new bloco(0.125, 0.07, 0.5, 0.56, 28, 85, 96);
+  bloco7_1 = new bloco(0.125, 0.07,  vec2(0.5, 0.48), block_color2);
+  bloco7_2 = new bloco(0.125, 0.07,  vec2(0.5, 0.56), block_color2);
 
-  bloco8 = new bloco(0.1, 0.15, 0.055, 0.91, 121, 174, 146);
+  bloco8 = new bloco(0.1, 0.15,  vec2(0.055, 0.91), block_color1);
 
-  bloco9 = new bloco(0.1, 0.1, 0.945, 0.935, 121, 174, 146);
+  bloco9 = new bloco(0.1, 0.1,  vec2(0.945, 0.935), block_color1);
 
   //imagens objeto
   imgMenu = new imagem(menu, 0.05, 0.08, 0.972, 0.05)
