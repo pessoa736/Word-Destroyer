@@ -1,4 +1,4 @@
-class vec2{
+class vector2{
   constructor(x,y){
     this.x = x
     this.y = y 
@@ -17,13 +17,21 @@ class vec2{
   }
 }
 
-class color{
+class Class_color{
   constructor(r, g, b){
     this.r = r
     this.g = g
     this.b = b 
   }
 }
+function color(r, g, b){
+  return new Class_color(r,g,b)
+}
+
+function vec2(x, y){
+  return new vector2(x, y)
+}
+
 
 class bloco {
   constructor(size, position, color) {
