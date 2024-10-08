@@ -26,7 +26,7 @@ function ObjetoPalavras(){
       if (Palavras[i].pos.y > 0.75){
         
         if(animaVerificar == true){
-          animaExplosao(Palavras[i].Xbloco, Palavras[i].Ybloco)
+          animaExplosao(Palavras[i].pos)
           
           if(velocidadeTempo2 == 29){
             animaVerificar = false;
@@ -63,7 +63,7 @@ function animacao(){
 
 
 function animacaoCidade(){
-  Cidade.tamanho_animado();
+  Cidade.draw();
   if(verificacao == true){
     Xc += velocidade2;
     if(Xc>=0){
@@ -113,18 +113,18 @@ function SistemaVida(){
     verificacao = false;
     
 
-    bloco6.tamanho();
+    bloco6.draw();
 
     fill(245, 0, 0);
     text('Fim de Jogo', windowWidth * 0.5, windowHeight * 0.425);
 
-    bloco7_1.tamanho();
+    bloco7_1.draw();
 
     fill(255);
     textSize(windowWidth*0.025);
     text('RECOMEÇAR', windowWidth*0.5, windowHeight*0.495);
 
-    bloco7_2.tamanho();
+    bloco7_2.draw();
 
     fill(255);
     text('MENU', windowWidth*0.5, windowHeight*0.575);
@@ -134,8 +134,8 @@ function SistemaVida(){
 //informação dos sistemas
 function infoGame(){
   //vida
-  bloco8.tamanho();
-  imgCoracao.tamanho_estatico();
+  bloco8.draw();
+  imgCoracao.draw();
   
   fill(255);
   textSize(windowWidth*0.02);
