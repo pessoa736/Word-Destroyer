@@ -4,8 +4,9 @@ function MenuTelas(){
 }
 
 
-function add_palavra(x, y){
-  Palavras.push(new PalavrasObj(0.1, 0.07, x, y, 28, 85, 96));
+function add_palavra(pos){
+  let add = new PalavrasObj(vec2(0.1, 0.07), pos, color(28, 85, 96))
+  Palavras.push( add );
 }
 function remove_palavra(id){
   Palavras.splice(id, 1);
@@ -15,14 +16,14 @@ function remove_palavra(id){
 
 function ObjetoPalavras(){
   if (t%100 == 1 && Palavras.length < n_blocos){
-    add_palavra(Ovni1.Ximg, 0.25)
+    add_palavra(vec2(Ovni1.size.x, 0.25))
   }
   
   if (Palavras.length > 0) {
     for(let i = 0; i<Palavras.length; i++){
       Palavras[i].obj();
       
-      if (Palavras[i].Ybloco > 0.75){
+      if (Palavras[i].pos.y > 0.75){
         
         if(animaVerificar == true){
           animaExplosao(Palavras[i].Xbloco, Palavras[i].Ybloco)
@@ -45,10 +46,10 @@ function ObjetoPalavras(){
   t++
 }
 
-function animaExplosao(x, y){
+function animaExplosao(pos){
   tempo2++;
-  Explosao = new imagem(imgExplosao[velocidadeTempo2 % 29], 0.125, 0.18, x, y);
-  Explosao.tamanho_estatico();
+  Explosao = new imagem(imgExplosao[velocidadeTempo2 % 29], vec2(0.125, 0.18), pos);
+  Explosao.draw();
   if (tempo2 > 2) {
     velocidadeTempo2++;
     tempo2 = 0;
