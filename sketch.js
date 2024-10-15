@@ -99,7 +99,7 @@ function setup() {
   var font;
   //blocos objeto
   let block_color1 = color(121, 174, 146)
-  let block_size1 = vec2(0.3, 0.11)
+  let small_block_size = vec2(0.3, 0.11)
   let block_color2 = color(28, 85, 96)
   
   blocos[1.1] =       new bloco(block_size1,       vec2(0.5, 0.39),    block_color1);
