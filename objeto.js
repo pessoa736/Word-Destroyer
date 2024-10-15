@@ -24,11 +24,11 @@ class Class_color{
     this.b = b 
   }
 }
-function color(r, g, b){
+export function color(r, g, b){
   return new Class_color(r,g,b)
 }
 
-function vec2(x, y){
+export function vec2(x, y){
   return new vector2(x, y)
 }
 
